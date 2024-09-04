@@ -9,7 +9,7 @@
 /coverage
 
 # IProducton
-/build
+# /build
 
 # misc
 .DS_Store
