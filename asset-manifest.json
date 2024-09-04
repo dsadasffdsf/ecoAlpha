@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/ecoAlpha/static/css/main.70468929.css",
+    "main.js": "/ecoAlpha/static/js/main.615df98e.js",
+    "index.html": "/ecoAlpha/index.html",
+    "main.70468929.css.map": "/ecoAlpha/static/css/main.70468929.css.map",
+    "main.615df98e.js.map": "/ecoAlpha/static/js/main.615df98e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.70468929.css",
+    "static/js/main.615df98e.js"
+  ]
+}
