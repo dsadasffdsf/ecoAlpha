@@ -10,7 +10,7 @@ const Product: FC<{ product: IProduct }> = ({ product }) => {
   const dispatch = useAppDispatch();
 
   const favoriteHandler = () => {
-    dispatch(toFavorite({ ...product })); 
+    dispatch(toFavorite({ ...product }));
   };
 
   const remHandler = () => {
