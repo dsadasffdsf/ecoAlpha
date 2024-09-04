@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "jsx": "react", // Поддержка JSX в TypeScript
+    "module": "ESNext", // Используемый модульный стандарт
+    "moduleResolution": "node", // Способ поиска модулей
+    "target": "es6", // Целевая версия JavaScript
+    "allowJs": true, // Разрешить использование JavaScript файлов
+    "baseUrl": "./src", // Корневая директория для поиска модулей
+    "esModuleInterop": true, // Включение совместимости с ES модулями
+    "strict": false, // Включение строгого режима TypeScript
+    "noEmit": true, // Не производить файлов вывода
+    "skipLibCheck": true, // Пропуск проверки типов библиотек
+    "resolveJsonModule": true // Поддержка импорта JSON файлов
+  },
+  "include": ["src"], // Указывает, какие файлы должны быть включены в компиляцию
+  "exclude": ["node_modules"] // Исключение директорий из компиляции
+}
