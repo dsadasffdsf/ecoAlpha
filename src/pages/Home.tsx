@@ -1,10 +1,7 @@
 import React, { FC } from 'react';
 
 const Home: FC = () => {
-  return <>
-  ProductEdit
-  
-  </>;
+  return <>empty Page</>;
 };
 
 export default Home;

@@ -2,7 +2,7 @@ import InputForForm from 'components/InputForForm';
 import { validationError } from 'func/validationError';
 import { useAppDispatch, useAppSelector } from 'hook/rtkHook';
 import { IProduct } from 'modules/IProduct';
-import React, { FC, useRef, useState } from 'react';
+import React, { FC, useCallback, useRef, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { editProduct } from '../redux/slices/productSlice';
 
@@ -50,6 +50,16 @@ const EditProduct: FC = () => {
     }
   };
 
+  const titleHandler = useCallback((titleValue: string) => {
+    setTitle(titleValue);
+  }, []);
+  const descriptionHandler = useCallback((descriptionValue: string) => {
+    setDescription(descriptionValue);
+  }, []);
+  const priceHandler = useCallback((priceValue: string) => {
+    setPrice(priceValue);
+  }, []);
+
   return (
     <>
       <form
@@ -62,21 +72,21 @@ const EditProduct: FC = () => {
             placeholder="Введите заголовок"
             error={titleError}
             value={title}
-            onChange={(e) => setTitle(e.target.value)}
+            onChange={titleHandler}
           />
           <InputForForm
             title="description"
             placeholder="Введите описание"
             error={descriptionError}
             value={description}
-            onChange={(e) => setDescription(e.target.value)}
+            onChange={descriptionHandler}
           />
           <InputForForm
             title="price"
             placeholder="Введите цену"
             error={priceError}
             value={price}
-            onChange={(e) => setPrice(e.target.value)}
+            onChange={priceHandler}
           />
         </ul>
         <button type="submit" className="btn">

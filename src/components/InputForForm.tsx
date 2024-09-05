@@ -1,14 +1,20 @@
-import React, { forwardRef, InputHTMLAttributes } from 'react';
+import React, { forwardRef, InputHTMLAttributes, memo, useCallback, useRef } from 'react';
 
 interface InputForForm {
   title: string;
   placeholder: string;
   error: string;
   value?: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange: (value: string) => void;
 }
 
-const InputForForm = ({ title, placeholder, error, value, onChange }: InputForForm) => {
+const InputForForm = memo(({ title, placeholder, error, value, onChange }: InputForForm) => {
+  const inputRef = useRef<HTMLInputElement>(null);
+  const handleChange = useCallback(() => {
+    onChange(inputRef.current.value);
+  }, [onChange]);
+  console.log('rerender');
+
   return (
     <li>
       <h4>{title}</h4>
@@ -17,10 +23,11 @@ const InputForForm = ({ title, placeholder, error, value, onChange }: InputForFo
         type="text"
         placeholder={placeholder}
         value={value}
-        onChange={onChange} // Обработчик изменений
+        onChange={handleChange}
+        ref={inputRef}
       />
       {error ? <div className="text-red-600 text-sm mt-1">{error}</div> : ''}
     </li>
   );
-};
+});
 export default InputForForm;

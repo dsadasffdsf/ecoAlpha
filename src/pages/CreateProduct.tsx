@@ -1,6 +1,6 @@
 import { useAppDispatch, useAppSelector } from 'hook/rtkHook';
 
-import React, { FC, useRef, useState } from 'react';
+import React, { FC, useCallback, useRef, useState } from 'react';
 import { addProduct } from '../redux/slices/productSlice';
 import { v4 as uuidv4 } from 'uuid';
 import { validationError } from 'func/validationError';
@@ -46,6 +46,16 @@ const CreateProduct: FC = () => {
     }
   };
 
+  const titleHandler = useCallback((titleValue: string) => {
+    setTitle(titleValue);
+  }, []);
+  const descriptionHandler = useCallback((descriptionValue: string) => {
+    setDescription(descriptionValue);
+  }, []);
+  const priceHandler = useCallback((priceValue: string) => {
+    setPrice(priceValue);
+  }, []);
+
   return (
     <>
       <h1 className="text-center">Форма создания продукта</h1>
@@ -55,19 +65,19 @@ const CreateProduct: FC = () => {
             title={'title'}
             placeholder={'Введите заголовок'}
             error={titleError}
-            onChange={(e) => setTitle(e.target.value)}
+            onChange={titleHandler}
           />
           <InputForForm
             title={'description'}
             placeholder={'Введите описание'}
             error={descriptionError}
-            onChange={(e) => setDescription(e.target.value)}
+            onChange={descriptionHandler}
           />
           <InputForForm
             title={'price'}
             placeholder={'Введите цену'}
             error={priceError}
-            onChange={(e) => setPrice(e.target.value)}
+            onChange={priceHandler}
           />
         </ul>
         <div className="mt-4">

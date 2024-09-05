@@ -740,6 +740,10 @@ video {
   margin-bottom: 2rem;
 }
 
+.mb-16 {
+  margin-bottom: 4rem;
+}
+
 .mt-1 {
   margin-top: 0.25rem;
 }

@@ -8,7 +8,7 @@ interface PaginationProps {
 
 const Pagination: FC<PaginationProps> = ({ totalPage, currentPage, handlePageChange }) => {
   return (
-    <div className="space-x-4 text-center">
+    <div className="space-x-4 text-center mb-16">
       <button
         className={`${currentPage === 1 ? 'opacity-50' : ''}`}
         onClick={() => handlePageChange(currentPage - 1)}
