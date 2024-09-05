@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/ecoAlpha/static/css/main.4574a11e.css",
-    "main.js": "/ecoAlpha/static/js/main.b370ebb3.js",
+    "main.css": "/ecoAlpha/static/css/main.26f3eff1.css",
+    "main.js": "/ecoAlpha/static/js/main.10e19697.js",
     "index.html": "/ecoAlpha/index.html",
-    "main.4574a11e.css.map": "/ecoAlpha/static/css/main.4574a11e.css.map",
-    "main.b370ebb3.js.map": "/ecoAlpha/static/js/main.b370ebb3.js.map"
+    "main.26f3eff1.css.map": "/ecoAlpha/static/css/main.26f3eff1.css.map",
+    "main.10e19697.js.map": "/ecoAlpha/static/js/main.10e19697.js.map"
   },
   "entrypoints": [
-    "static/css/main.4574a11e.css",
-    "static/js/main.b370ebb3.js"
+    "static/css/main.26f3eff1.css",
+    "static/js/main.10e19697.js"
   ]
 }
