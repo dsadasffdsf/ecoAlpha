@@ -584,9 +584,10 @@ video {
   cursor: pointer;
   opacity: 0.2;
   transition: opacity ease 0.5s;
-  &:hover {
-    opacity: 1;
-  }
+}
+
+.heart:hover {
+  opacity: 1;
 }
 
 .heart:before,
@@ -618,9 +619,10 @@ video {
   opacity: 0.2;
   cursor: pointer;
   transition: opacity ease 0.5s;
-  &:hover {
-    opacity: 1;
-  }
+}
+
+.close-cross:hover {
+  opacity: 1;
 }
 
 .close-cross::before,
